@@ -1,15 +1,15 @@
 <section class="share">
-    <p style="font-size:1.4em;">Did not found what you wanted? Check out <a href="/topics/">possible coming topics</a> or suggest a topic for a post! </p>
+    <p style="font-size:1.4em;">Did not found what you wanted? Check out <a href="{{ "/topics/" | relative_url }}">possible coming topics</a> or suggest a topic for a post! </p>
     <p style="font-size:1.4em;"> <a href="https://github.com/kyyberi/100daysofDX/issues/new">Raise an issue in Github</a></p>
  
         
     <p style="font-size:1.4em;">See discussion also in Twitter - follow hashtag <a href="https://twitter.com/search?q=%23100daysdx&src=typd">#100DaysDX</a></p>
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;{{ page.twitter_text }}&quot;%20{{ site.url }}{{ page.url }}%20via%20&#64;{{ site.twitter_username }}&hashtags={% for tag in page.tags %}{{tag}},{% endfor %}"
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;{{ page.twitter_text }}&quot;%20{{ page.url | absolute_url }}%20via%20&#64;{{ site.twitter_username }}&hashtags={% for tag in page.tags %}{{tag}},{% endfor %}"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>

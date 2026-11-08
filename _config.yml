@@ -1,8 +1,8 @@
 # Site settings
 title: 100 Days of Developer eXperience 
 description: Daily unfiltered & opinionated posts written July - November 2019
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://100daysDX.com" 
+baseurl: "/100daysofDX"
+url: "https://kyyberi.github.io"
 
 # User settings
 username: 100 Days of Developer eXperience

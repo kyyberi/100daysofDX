@@ -1,12 +1,12 @@
 .header-site {
  background-color: #ef5100;
- background-image: url("/assets/img/bg.png");
+ background-image: url("../img/bg.png");
  background-repeat: no-repeat;
 }
 
 .header-post {
  background-color: #ef5100;
- background-image: url("/assets/img/bg2.png");
+ background-image: url("../img/bg2.png");
  background-repeat: no-repeat;
 }
 .header-post .subtitle {

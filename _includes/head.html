@@ -26,7 +26,7 @@
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     {% if page.image %}
-    <meta property="twitter:image:src" content="{{ site.url }}{{page.image }}">
+    <meta property="twitter:image:src" content="{{ page.image | absolute_url }}">
     {% else %}
     <meta property="twitter:image:src" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
     {% endif %}
@@ -35,7 +35,7 @@
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     {% if page.image %}
-    <meta property="og:image" content="{{ site.url }}{{page.image }}">
+    <meta property="og:image" content="{{ page.image | absolute_url }}">
     {% else %}
     <meta property="og:image" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
     {% endif %}
@@ -69,8 +69,8 @@
     <!-- Android Lolipop Theme Color -->
     <meta name="theme-color" content="#0562DC">
 
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/mod.css">
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/mod.css" | relative_url }}">
 
     <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 
