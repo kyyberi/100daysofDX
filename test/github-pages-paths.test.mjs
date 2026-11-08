@@ -49,3 +49,10 @@ test('Liquid-generated href and src attributes are quoted', () => {
   });
   assert.deepEqual(malformedAttributes, []);
 });
+
+test('home hero keeps long words inside narrow viewports', () => {
+  const source = fs.readFileSync(path.join(root, 'src/styl/_header.styl'), 'utf8');
+  const compiled = fs.readFileSync(path.join(root, 'assets/css/main.css'), 'utf8');
+  assert.match(source, /\.site-title[\s\S]*?\+below\(cut\)[\s\S]*?font-size rem\(48px\)[\s\S]*?overflow-wrap anywhere/);
+  assert.match(compiled, /@media only screen and \(max-width:37\.5rem\)\{\.header-site \.site-title\{font-size:3rem;overflow-wrap:anywhere;\}\}/);
+});
